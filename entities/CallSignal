@@ -1,0 +1,49 @@
+{
+  "name": "CallSignal",
+  "type": "object",
+  "properties": {
+    "from_user_id": {
+      "type": "string",
+      "description": "Caller's phone ID"
+    },
+    "to_user_id": {
+      "type": "string",
+      "description": "Receiver's phone ID"
+    },
+    "from_name": {
+      "type": "string",
+      "description": "Caller's display name"
+    },
+    "signal_type": {
+      "type": "string",
+      "enum": [
+        "offer",
+        "answer",
+        "ice-candidate",
+        "hang-up",
+        "ring"
+      ],
+      "description": "Type of WebRTC signal"
+    },
+    "signal_data": {
+      "type": "string",
+      "description": "JSON stringified WebRTC signal data"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "answered",
+        "rejected",
+        "missed",
+        "ended"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "from_user_id",
+    "to_user_id",
+    "signal_type"
+  ]
+}

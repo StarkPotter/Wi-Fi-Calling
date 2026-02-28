@@ -1,0 +1,44 @@
+{
+  "name": "CallLog",
+  "type": "object",
+  "properties": {
+    "caller_id": {
+      "type": "string",
+      "description": "Caller's phone ID"
+    },
+    "caller_name": {
+      "type": "string"
+    },
+    "receiver_id": {
+      "type": "string",
+      "description": "Receiver's phone ID"
+    },
+    "receiver_name": {
+      "type": "string"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "default": 0
+    },
+    "call_type": {
+      "type": "string",
+      "enum": [
+        "outgoing",
+        "incoming",
+        "missed"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "missed",
+        "rejected"
+      ]
+    }
+  },
+  "required": [
+    "caller_id",
+    "receiver_id"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Contact",
+  "type": "object",
+  "properties": {
+    "owner_email": {
+      "type": "string",
+      "description": "Email of the user who owns this contact"
+    },
+    "name": {
+      "type": "string",
+      "description": "Contact display name"
+    },
+    "phone_id": {
+      "type": "string",
+      "description": "The contact's 6-digit phone number"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes about this contact"
+    }
+  },
+  "required": [
+    "owner_email",
+    "name",
+    "phone_id"
+  ]
+}
