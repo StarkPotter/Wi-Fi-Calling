@@ -1,8 +1,7 @@
 
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import base44 from '@base44/vite-plugin'  // ← ADD THIS LINE  
-export default defineConfig({  
+import base44 from '@base44/vite-plugin'    
 
 // https://vite.dev/config/
 export default defineConfig({
